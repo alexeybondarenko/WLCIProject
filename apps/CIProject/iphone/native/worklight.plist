@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>protocol</key> 
+	<string>http</string>
+	<key>host</key>
+	<string>192.168.77.33</string>
+	<key>port</key>
+	<string>9080</string>
+	<key>wlServerContext</key>
+	<string>/WLCIProject/</string>
+	<key>application id</key>
+	<string>CIProject</string>
+	<key>application version</key>
+	<string>1.0</string>
+	<key>environment</key>
+	<string>iphone</string>
+	<key>buildtime</key>
+	<string></string>
+	<key>authenticitySharedData</key>
+	<string>${authenticitySharedData}</string>
+	<key>testWebResourcesChecksum</key>
+	<string>false</string>
+	<key>ignoredFileExtensions</key>
+	<string></string>
+	<key>wlMainFile</key>
+	<string>index.html</string>
+	<key>wlUid</key>
+	<string>GT4Ln2VkrER6rXcwym1C+Q==</string>			
+	<key>platformVersion</key>
+	<string>6.2.0.01.20141015-1508</string>
+	<key>wlAppFamily</key>
+	<string></string>
+	<key>wlShareCookies</key>
+	<string></string>
+	<key>wlShareUserCert</key>
+	<string>false</string>
+</dict>
+</plist>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="CIProject-war" default="build" >
+
+	<property name="worklight.workspace" value="../../../../" />
+    <property name="worklight.server.host" value="http://192.168.77.33:9080" />
+    <property name="worklight.server.runtime" value="WLCIProject" />
+    <!-- Worklight admin settings. WLADMIN - Rest API for management runtimes, applications and adapters on worklight server -->
+    <property name="worklight.admin.context" value="worklightadmin" />
+    <property name="worklight.admin.username" value="admin" />
+    <property name="worklight.admin.password" value="admin" />
+    <!-- Workligth.admin.security = true if worklight.server.host containe https, and false if not -->
+    <property name="worklight.admin.secure" value="false" />
+
+    <property name="project.name" value="WLCIProject" />
+    <property name="project.application.name" value="CIProject" />
+
+    <property name="project.dir" value="${worklight.workspace}/${project.name}" />
+    <property name="project.application.dir" value="${project.dir}/apps/${project.application.name}" />
+    <property name="project.output.dir" value="${project.dir}/bin" />
+    <property name="project.adapters.dir" value="${project.dir}/adapters" />
+    <property name="ant.dir" value="/Users/alexeybondarenko/Projects/antLibraries" />
+
+    <taskdef resource="com/worklight/ant/defaults.properties">
+    <classpath>
+      <pathelement location="${ant.dir}/worklight-ant-builder.jar"/>
+    </classpath>
+  </taskdef>
+  <taskdef resource="com/worklight/ant/deployers/antlib.xml">
+    <classpath>
+      <pathelement location="${ant.dir}/worklight-ant-deployer.jar"/>
+    </classpath>
+  </taskdef>
+  <!-- Building task  -->
+  <target name="build" >
+    <war-builder projectfolder="${project.dir}"
+                 destinationfolder="${project.output.dir}"
+                 warfile="${project.output.dir}/${project.name}.war"
+                 classesFolder="${project.dir}/server/lib" />
+  </target>
+  <!-- Deploying task  -->
+  <target name="deploy" >
+    
+  </target>
+  <target name="build-and-deploy" depends="build, deploy" />
+</project>

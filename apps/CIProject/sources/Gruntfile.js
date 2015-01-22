@@ -41,7 +41,8 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'development',
-            apiEndpoint: 'http://dev.yoursite.com:10000/'
+            apiEndpoint: 'http://dev.yoursite.com:10000/',
+            revision: '<%= revision.hash %>'
           }
         }
       },
@@ -49,7 +50,8 @@ module.exports = function (grunt) {
         constants: {
           ENV: {
             name: 'production',
-            apiEndpoint: 'http://api.yoursite.com/'
+            apiEndpoint: 'http://api.yoursite.com/',
+            revision: '<%= meta.revision %>'
           }
         }
       }
@@ -181,6 +183,17 @@ module.exports = function (grunt) {
         ant: {
             command: 'ant -buildfile ../ant/application.xml build-and-deploy-all'
         }
+    },
+    xmlpoke: {
+      updateVersion: {
+        options: {
+          xpath: '/widget/@version',
+          value: '<% meta.revision %>'
+        },
+        files: {
+          'config2.xml': 'config.xml'
+        }
+      },
     },
 
     
@@ -523,6 +536,10 @@ module.exports = function (grunt) {
     'uglify',
     'usemin',
     'htmlmin'
+  ]);
+  grunt.registerTask('version', [
+    'xmlpoke:updateVersion',
+    'revision'
   ]);
   grunt.registerTask('buildCI', [
     'build',

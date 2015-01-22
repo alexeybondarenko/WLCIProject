@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." name="CIProject" default="build-and-deploy-app" >
-    <property name="worklight.workspace" value="/Users/alexeybondarenko/Projects/" />
-    <property name="worklight.server.host" value="http://localhost:10080" />
+    <property name="worklight.workspace" value="../../../../" />
+    <property name="worklight.server.host" value="http://192.168.77.33:9080" />
     <property name="worklight.server.runtime" value="WLCIProject" />
   
   <!-- Worklight admin settings. WLADMIN - Rest API for management runtimes, applications and adapters on worklight server -->
