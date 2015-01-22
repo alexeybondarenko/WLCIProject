@@ -3,5 +3,3 @@ node_js:
  - "0.10"
 before_install: 
  - npm install -g grunt
-gscript:
- - grunt --gruntfile apps/CIProject/sources/Gruntfile.js build --force 
