@@ -1,0 +1,11 @@
+bin/
+.idea/
+apps/*/common
+apps/*/iphone/native/www
+apps/*/iphone/native/*.xcodeproj/xcuserdata/*
+apps/*/iphone/native/*.xcodeproj/project.xcworkspace/xcuserdata/*
+
+apps/*/android/native/*.iml
+apps/*/android/native/bin
+apps/*/android/native/gen
+apps/*/android/native/assets
