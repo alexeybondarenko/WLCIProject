@@ -2,6 +2,8 @@ language: node_js
 node_js:
  - 0.10
 before_install: 
- - npm install -g grunt
+ - npm install -g grunt-cli
 script: 
- - grunt --gruntfile apps/CIProject/sources/Gruntfile.js build --force
+ - cd apps/CIProject/sources/
+ - npm install
+ - grunt build --force
