@@ -174,6 +174,15 @@ module.exports = function (grunt) {
       }
     },
 
+     shell: {
+        options: {
+            stderr: false
+        },
+        ant: {
+            command: 'ant -buildfile ../ant/application.xml build-and-deploy-all'
+        }
+    },
+
     
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -514,6 +523,10 @@ module.exports = function (grunt) {
     'uglify',
     'usemin',
     'htmlmin'
+  ]);
+  grunt.registerTask('buildCI', [
+    'build',
+    'shell:ant'
   ]);
 
   grunt.registerTask('cordova', ['copy:all', 'cordova:build']);

@@ -22,4 +22,11 @@
 	<thumbnailImage>common/images/thumbnail.png</thumbnailImage> 
 	<features>
 	</features>
+    <iphone bundleId="com.CIProject" version="1.0">
+        <worklightSettings include="true"/>
+        <security>
+            <encryptWebResources enabled="false"/>
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
+        </security>
+    </iphone>
 </application>

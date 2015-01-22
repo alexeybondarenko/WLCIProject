@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="WLCIProject">
-        <property name="context-root" value="WLCIProject"/>
-    </wb-module>
+<?xml version='1.0' encoding='utf-8'?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+  <wb-module deploy-name="WLCIProject">
+    <property name="context-root" value="WLCIProject" />
+    <wb-resource deploy-path="/" source-path="/apps/CIProject/common" />
+    <wb-resource deploy-path="/" source-path="/apps/CIProject/iphone" />
+  </wb-module>
 </project-modules>

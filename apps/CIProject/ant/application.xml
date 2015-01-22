@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="CIProject" default="build-and-deploy-app" >
+    <property name="worklight.workspace" value="/Users/alexeybondarenko/Projects/" />
+    <property name="worklight.server.host" value="http://localhost:10080" />
+    <property name="worklight.server.runtime" value="WLCIProject" />
+  
+  <!-- Worklight admin settings. WLADMIN - Rest API for management runtimes, applications and adapters on worklight server -->
+  <property name="worklight.admin.context" value="worklightadmin" />
+  <property name="worklight.admin.username" value="admin" />
+  <property name="worklight.admin.password" value="admin" />
+  <!-- Workligth.admin.security = true if worklight.server.host containe https, and false if not -->
+  <property name="worklight.admin.secure" value="false" /> 
+  
+  <property name="project.name" value="WLCIProject" />
+  <property name="project.application.name" value="CIProject" />
+  
+  <property name="project.dir" value="${worklight.workspace}/${project.name}" /> 
+  <property name="project.application.dir" value="${project.dir}/apps/${project.application.name}" />
+  <property name="project.output.dir" value="${project.dir}/bin" />
+  <property name="project.adapters.dir" value="${project.dir}/adapters" />
+  <property name="ant.dir" value="/Users/alexeybondarenko/Projects/antLibraries" />
+  
+  <taskdef resource="com/worklight/ant/defaults.properties">
+    <classpath>
+      <pathelement location="${ant.dir}/worklight-ant-builder.jar"/>
+    </classpath>
+  </taskdef>
+  <taskdef resource="com/worklight/ant/deployers/antlib.xml">
+    <classpath>
+      <pathelement location="${ant.dir}/worklight-ant-deployer.jar"/>
+    </classpath>
+  </taskdef>
+  <!-- Building task  -->
+  <target name="build-app">
+    <app-builder
+      worklightserverhost="${worklight.server.host}/${worklight.server.runtime}"
+      applicationFolder="${project.application.dir}"
+      nativeProjectPrefix="${project.name}"
+      outputFolder="${project.output.dir}"/>
+  </target>
+  <target name="build-adapters">
+  </target>
+  <!-- Deploying task  -->
+  <target name="deploy-app" >
+    <wladm url="${worklight.server.host}/${worklight.admin.context}" user="${worklight.admin.username}" password="${worklight.admin.password}" secure="${worklight.admin.secure}" >
+      <deploy-app runtime="${worklight.server.runtime}" file="${project.output.dir}/${project.application.name}-common.wlapp" />
+    </wladm>
+  </target>
+  <target name="deploy-adapters" >
+    <wladm url="${worklight.server.host}/${worklight.admin.context}" user="${worklight.admin.username}" password="${worklight.admin.password}" secure="${worklight.admin.secure}" >
+    </wladm>
+  </target>
+  <target name="build-and-deploy-app" depends="build-app, deploy-app" />
+  <target name="build-and-deploy-adapters" depends="build-adapters, deploy-adapters" />
+  <target name="build-and-deploy-all" depends="build-and-deploy-app, build-and-deploy-adapters" />
+</project>
