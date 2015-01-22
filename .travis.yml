@@ -5,5 +5,5 @@ before_install:
  - cd apps/CIProject/sources
  - npm install -g grunt
  - npm install
- script: 
+script: 
  - grunt build --force 
