@@ -1,0 +1,20 @@
+----------------------------------------------------------------
+Thu Jan 22 11:26:52 EET 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.3 - (1326460): instance a816c00e-014b-10f7-3ac0-000003c985d8 
+on database directory /Users/alexeybondarenko/.worklight/6.2.0/server/derby/WLCIProject/WRKLGHT  with class loader AntClassLoader[/Applications/IBM/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar] 
+Loaded from file:/Applications/IBM/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_65-b14-466.1-11M4716
+user.dir=/Users/alexeybondarenko/Projects/WLCIProject/apps/CIProject
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Jan 22 11:26:53 EET 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.2.3 - (1326460): instance 40348015-014b-10f7-3ac0-000003c985d8 
+on database directory /Users/alexeybondarenko/.worklight/6.2.0/server/derby/WLCIProject/WLREPORT  with class loader AntClassLoader[/Applications/IBM/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar] 
+Loaded from file:/Applications/IBM/Worklight-CLI/worklight-cli/node_modules/generator-worklight-server/lib/worklight-ant-deployer.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_65-b14-466.1-11M4716
+user.dir=/Users/alexeybondarenko/Projects/WLCIProject/apps/CIProject
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
