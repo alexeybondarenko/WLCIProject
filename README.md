@@ -12,7 +12,7 @@ To start working wsith project, you should have installed:
 - compass
 - bower
 
-If you need to install then, execude command below in command line:
+If you need to install them by executing commands below in command line:
 	
 	npm install -g grunt-cli compass bower
 
